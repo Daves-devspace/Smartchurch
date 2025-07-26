@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Divine Verse Design System - Church Themed */
+
+@layer base {
+  :root {
+    /* Divine Color Palette */
+    --background: 44 30% 97%;
+    --foreground: 225 15% 15%;
+
+    --card: 45 40% 98%;
+    --card-foreground: 225 15% 15%;
+
+    --popover: 45 40% 98%;
+    --popover-foreground: 225 15% 15%;
+
+    /* Sacred Primary - Deep Navy Blue */
+    --primary: 225 100% 12%;
+    --primary-foreground: 45 40% 98%;
+    --primary-glow: 225 80% 25%;
+
+    /* Holy Secondary - Warm Cream */
+    --secondary: 45 35% 92%;
+    --secondary-foreground: 225 15% 15%;
+
+    /* Blessed Muted - Soft Gray */
+    --muted: 225 10% 85%;
+    --muted-foreground: 225 8% 45%;
+
+    /* Divine Accent - Rich Gold */
+    --accent: 45 85% 55%;
+    --accent-foreground: 225 100% 12%;
+    --accent-glow: 45 100% 70%;
+
+    /* Sacred Destructive */
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 45 40% 98%;
+
+    --border: 225 15% 88%;
+    --input: 225 15% 88%;
+    --ring: 225 100% 12%;
+
+    --radius: 0.75rem;
+
+    /* Divine Gradients */
+    --gradient-divine: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-celestial: linear-gradient(180deg, hsl(var(--background)), hsl(var(--secondary)));
+    --gradient-holy: linear-gradient(45deg, hsl(var(--accent)), hsl(var(--accent-glow)));
+
+    /* Sacred Shadows */
+    --shadow-divine: 0 8px 32px -8px hsl(var(--primary) / 0.2);
+    --shadow-blessed: 0 4px 16px -4px hsl(var(--accent) / 0.15);
+    --shadow-verse: 0 12px 40px -12px hsl(var(--primary) / 0.3);
+
+    /* Holy Transitions */
+    --transition-divine: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-blessed: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 45 40% 98%;
+    --sidebar-foreground: 225 15% 15%;
+    --sidebar-primary: 225 100% 12%;
+    --sidebar-primary-foreground: 45 40% 98%;
+    --sidebar-accent: 45 35% 92%;
+    --sidebar-accent-foreground: 225 15% 15%;
+    --sidebar-border: 225 15% 88%;
+    --sidebar-ring: 225 100% 12%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-['Crimson_Text'];
+  }
+
+  /* Divine Typography */
+  .font-sacred {
+    font-family: 'Cinzel', serif;
+  }
+
+  .font-verse {
+    font-family: 'Crimson Text', serif;
+  }
+}
+
+@layer components {
+  /* Divine Button Variants */
+  .btn-divine {
+    @apply bg-[var(--gradient-divine)] text-primary-foreground shadow-[var(--shadow-divine)] hover:shadow-[var(--shadow-verse)] transition-[var(--transition-divine)] hover:scale-105;
+  }
+
+  .btn-blessed {
+    @apply bg-accent text-accent-foreground shadow-[var(--shadow-blessed)] hover:bg-[hsl(var(--accent-glow))] transition-[var(--transition-blessed)] hover:scale-105;
+  }
+
+  /* Sacred Card Variants */
+  .card-divine {
+    @apply bg-card shadow-[var(--shadow-divine)] border border-border/50 backdrop-blur-sm transition-[var(--transition-divine)];
+  }
+
+  .card-verse {
+    @apply bg-card/80 shadow-[var(--shadow-verse)] border border-accent/30 backdrop-blur-md transition-[var(--transition-divine)] hover:shadow-[var(--shadow-blessed)] hover:border-accent/50;
+  }
+
+  /* Blessed Animations */
+  .animate-divine-fade {
+    animation: divine-fade 0.6s ease-out forwards;
+  }
+
+  .animate-verse-slide {
+    animation: verse-slide 0.5s ease-out forwards;
+  }
+
+  .animate-holy-glow {
+    animation: holy-glow 2s ease-in-out infinite alternate;
+  }
+}
+
+@layer utilities {
+  /* Divine Gradients */
+  .bg-gradient-divine {
+    background: var(--gradient-divine);
+  }
+
+  .bg-gradient-celestial {
+    background: var(--gradient-celestial);
+  }
+
+  .bg-gradient-holy {
+    background: var(--gradient-holy);
+  }
+
+  /* Sacred Text Effects */
+  .text-divine-glow {
+    text-shadow: 0 0 20px hsl(var(--accent) / 0.4);
+  }
+
+  .text-blessed-shadow {
+    text-shadow: 0 2px 8px hsl(var(--primary) / 0.3);
+  }
+}
+
+/* Divine Keyframes */
+@keyframes divine-fade {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes verse-slide {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes holy-glow {
+  from {
+    box-shadow: 0 0 20px hsl(var(--accent) / 0.2);
+  }
+  to {
+    box-shadow: 0 0 40px hsl(var(--accent) / 0.4);
+  }
+}
