@@ -2,3 +2,11 @@ venv/
 venv
 scripture/test_files/preaching-clip.wav
 verse_index.faiss
+# .gitignore
+*.wav
+*.mp4
+*.mp3
+*.faiss
+__pycache__/
+node_modules/
+.env
