@@ -90,7 +90,14 @@ Filter False Positives → Queue Manager → Overlay Engine → Frontend
 
 ---
 
+##Admin conrol dashboard
+
   <img width="1917" height="959" alt="Screenshot from 2025-07-27 16-43-58" src="https://github.com/user-attachments/assets/44c479d4-8c7a-4a09-81f4-5695c06d3037" />
+
+##Audience projected screen
+
+  <img width="1917" height="959" alt="Screenshot from 2025-07-27 16-47-08" src="https://github.com/user-attachments/assets/0c426edc-3dcf-40d3-89c9-367ab3ef7717" />
+
 
 
 ## Implementation Strategy
