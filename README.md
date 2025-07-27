@@ -6,7 +6,7 @@ Develop two interconnected modules for a church management system to enhance the
 1. **Real-Time Sermon Translator** – Capture, transcribe, and translate live sermons into multiple languages instantly.
 2. **Dynamic Scripture Finder** – Detect quoted Bible verses in real time and display full passages with context.
 
-   #Diagram
+   #Diagram-
 
    Audio → VAD → Whisper ASR → “chunk”
      ↓
