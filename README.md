@@ -8,7 +8,8 @@ Develop two interconnected modules for a church management system to enhance the
 
    #Diagram-
 
-   Audio → VAD → Whisper ASR → “chunk”
+   ```text
+Audio → VAD → Whisper ASR → “chunk”
      ↓
 [Explicit] ──> DistilBERT NER ──> detected_scriptures (confidence)
      │
@@ -18,6 +19,8 @@ Develop two interconnected modules for a church management system to enhance the
                              sem_hits → detected_scriptures
      ↓
 Filter False Positives → Queue Manager → Overlay Engine → Frontend
+```
+
 
 
 ---
