@@ -90,6 +90,9 @@ Filter False Positives → Queue Manager → Overlay Engine → Frontend
 
 ---
 
+  <img width="1917" height="959" alt="Screenshot from 2025-07-27 16-43-58" src="https://github.com/user-attachments/assets/44c479d4-8c7a-4a09-81f4-5695c06d3037" />
+
+
 ## Implementation Strategy
 
 | Phase         | Duration | Key Activities                                                         |
@@ -118,5 +121,4 @@ Filter False Positives → Queue Manager → Overlay Engine → Frontend
 - **Cross‑Module Integration:** Share transcript pipeline between modules to minimize duplication.
 - **Stakeholder Alignment:** Collaborate with church tech teams, pastors, and AV staff early.
 - **Testing:** Simulate chapel acoustics, run load tests on retrieval and translation under peak usage.
-  <img width="1917" height="959" alt="Screenshot from 2025-07-27 16-43-58" src="https://github.com/user-attachments/assets/44c479d4-8c7a-4a09-81f4-5695c06d3037" />
 
